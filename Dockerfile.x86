@@ -1,6 +1,14 @@
-FROM python:3.6-slim
-MAINTAINER evanlezar@gmail.com
+FROM alpine:3.5
 
-RUN pip install --upgrade speedtest-cli
+RUN apk update \
+ && apk upgrade \
+ && apk add --no-cache \
+    py-pip \
+
+ && pip install --upgrade pip \
+ && pip install --upgrade speedtest-cli \
+
+ && rm -rf /var/cache/apk/* \
+ && rm -rf /tmp/* /var/tmp/*
 
 CMD ["speedtest", "--json"]
