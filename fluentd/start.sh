@@ -7,7 +7,7 @@ fi
 
 FLUENTD_HTTP_ENDPOINT=${FLUENTD_HTTP_ENDPOINT:-http://www.example.com}
 
-IMAGE_NAME=local-fluent
+IMAGE_NAME=fluentd-logger
 
 
 TIME_VOLUMES=
