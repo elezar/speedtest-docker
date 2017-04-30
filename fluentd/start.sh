@@ -16,7 +16,7 @@ then
     TIME_VOLUMES="${TIME_VOLUMES} -v /etc/localtime:/etc/localtime:ro"
 fi
 
-docker run --rm -ti \
+docker run --restart=always --name=fluentdapp -d \
         -e FLUENTD_OPT="-v" \
         -e FLUENTD_HTTP_ENDPOINT=${FLUENTD_HTTP_ENDPOINT} \
         ${TIME_VOLUMES} \
