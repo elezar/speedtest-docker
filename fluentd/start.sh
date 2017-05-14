@@ -11,7 +11,7 @@ SPEEDTEST_LOG_PATH=${SPEEDTEST_LOG_PATH:-/tmp}
 IMAGE_NAME=fluentd-logger
 if [ ! -d ${SPEEDTEST_LOG_PATH} ]
 then
-  mkdir -p SPEEDTEST_LOG_PATH
+  mkdir -p ${SPEEDTEST_LOG_PATH}
 fi
 
 TIME_VOLUMES=
